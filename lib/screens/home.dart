@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:telegram/data/chats.dart';
 import 'package:telegram/widgets/chat_list.dart';
+import 'package:telegram/widgets/spider_drawer.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -29,7 +30,7 @@ class _HomeState extends State<Home> {
           ),
         ],
       ),
-      drawer: const Drawer(),
+      drawer: const SpiderDrawer(),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         child: const Icon(
