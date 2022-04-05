@@ -1,5 +1,6 @@
 class DateUtil {
   DateTime date;
+  DateTime now = DateTime.now();
 
   DateUtil(this.date);
 
@@ -14,7 +15,11 @@ class DateUtil {
   ];
 
   String getTime() {
-    return "${date.hour}:${date.minute}";
+    if (date.isBefore(DateTime(now.year, now.month, now.day))) {
+      return getWeek();
+    }
+
+    return "${date.hour < 10 ? '0' : ''}${date.hour}:${date.minute < 10 ? '0' : ''}${date.minute}";
   }
 
   String getWeek() {

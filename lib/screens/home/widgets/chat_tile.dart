@@ -24,7 +24,7 @@ class ChatTile extends StatelessWidget {
           fontWeight: FontWeight.bold,
         ),
       ),
-      subtitle: Text(chat.lastMessage),
+      subtitle: Text(chat.lastMessage.message ?? "..."),
       trailing: chat.unread ? UnreadTrailing(chat) : ChatTime(chat),
       onTap: () {},
       style: ListTileStyle.list,

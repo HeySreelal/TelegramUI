@@ -1,21 +1,34 @@
+import 'package:telegram/data/data.dart';
+import 'package:telegram/models/message.dart';
+
 class Chat {
   int id;
   String name;
-  String lastMessage;
-  DateTime time;
   bool isOnline;
-  bool unread;
-  int unreadCount;
-
-  String get avatar => name + '.jpg';
 
   Chat({
     required this.id,
     required this.name,
-    required this.lastMessage,
-    required this.time,
     required this.isOnline,
-    required this.unread,
-    this.unreadCount = 0,
-  });
+  }) {
+    messages.sort((a, b) => a.date.compareTo(b.date));
+  }
+
+  String get avatar => name + '.jpg';
+  DateTime get lastMessageTime => lastMessage.date;
+  Message get lastMessage => messages.last;
+
+  int get unreadCount => messages
+      .where(
+        (msg) => !msg.read && msg.from != OwlData.me.id,
+      )
+      .toList()
+      .length;
+
+  bool get unread => unreadCount > 0;
+  List<Message> get messages => OwlData.messages
+      .where(
+        (msg) => msg.chatId == id,
+      )
+      .toList();
 }

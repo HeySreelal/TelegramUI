@@ -15,7 +15,7 @@ class UnreadTrailing extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text(DateUtil(chat.time).getTime()),
+        Text(DateUtil(chat.lastMessageTime).getTime()),
         const SizedBox(
           height: 8,
         ),

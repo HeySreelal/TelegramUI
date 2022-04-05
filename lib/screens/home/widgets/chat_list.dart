@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:telegram/data/chats.dart';
+import 'package:telegram/data/data.dart';
 import 'package:telegram/screens/home/widgets/chat_tile.dart';
 
 class ChatList extends StatelessWidget {

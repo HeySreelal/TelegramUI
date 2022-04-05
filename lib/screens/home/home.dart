@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:telegram/data/chats.dart';
+import 'package:telegram/data/data.dart';
 import 'package:telegram/screens/home/widgets/chat_list.dart';
 import 'package:telegram/screens/home/widgets/spider_drawer.dart';
 
@@ -13,7 +13,9 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   void initState() {
-    OwlData.chats.sort((a, b) => b.time.compareTo(a.time));
+    OwlData.chats.sort(
+      (a, b) => b.lastMessageTime.compareTo(a.lastMessageTime),
+    );
     super.initState();
   }
 
