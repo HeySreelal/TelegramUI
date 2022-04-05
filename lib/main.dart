@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:telegram/screens/home.dart';
+import 'package:telegram/screens/home/home.dart';
 import 'package:telegram/utils/theme.dart';
 
 void main() => runApp(const MyApp());
@@ -13,15 +13,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Telegram',
       home: const Home(),
-      theme: ThemeData(
-        scaffoldBackgroundColor: Colors.black,
-        primaryColor: OwlTheme.primaryBlack,
-        colorScheme: const ColorScheme.dark(),
-        floatingActionButtonTheme: const FloatingActionButtonThemeData(
-          foregroundColor: OwlTheme.white,
-          backgroundColor: OwlTheme.lightBlue,
-        ),
-      ),
+      theme: OwlTheme.theme,
     );
   }
 }
