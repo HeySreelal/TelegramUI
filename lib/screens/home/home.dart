@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:telegram/data/chats.dart';
-import 'package:telegram/widgets/chat_list.dart';
-import 'package:telegram/widgets/spider_drawer.dart';
+import 'package:telegram/screens/home/widgets/chat_list.dart';
+import 'package:telegram/screens/home/widgets/spider_drawer.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);

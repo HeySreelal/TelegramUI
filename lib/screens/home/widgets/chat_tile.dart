@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:telegram/models/chat.dart';
-import 'package:telegram/widgets/chat_time.dart';
-import 'package:telegram/widgets/unread_trailing.dart';
+import 'package:telegram/screens/home/widgets/chat_time.dart';
+import 'package:telegram/screens/home/widgets/unread_trailing.dart';
 
 class ChatTile extends StatelessWidget {
   const ChatTile(
