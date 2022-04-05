@@ -1,19 +1,31 @@
 import 'package:flutter/material.dart';
 
-class TypeAndSend extends StatelessWidget {
-  final TextEditingController text;
-  final Function(String) changeValue;
-  final bool isVoice;
-  final VoidCallback changeVoiceCam;
-  final bool isTextEmpty;
+class TypeAndSend extends StatefulWidget {
   const TypeAndSend({
     Key? key,
-    required this.changeValue,
-    required this.isVoice,
-    required this.changeVoiceCam,
-    required this.isTextEmpty,
-    required this.text,
   }) : super(key: key);
+
+  @override
+  State<TypeAndSend> createState() => _TypeAndSendState();
+}
+
+class _TypeAndSendState extends State<TypeAndSend> {
+  bool isTextEmpty = true;
+  bool isVoice = true;
+
+  void changeVoiceCam() {
+    setState(() {
+      isVoice = !isVoice;
+    });
+  }
+
+  final TextEditingController _text = TextEditingController();
+
+  void changeValue(String v) {
+    setState(() {
+      isTextEmpty = v.isEmpty;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +39,7 @@ class TypeAndSend extends StatelessWidget {
           ),
           Expanded(
             child: TextField(
-              controller: text,
+              controller: _text,
               decoration: const InputDecoration(
                 hintText: "Type a message...",
                 border: InputBorder.none,

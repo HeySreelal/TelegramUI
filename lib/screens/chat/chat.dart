@@ -18,24 +18,7 @@ class ChatScreen extends StatefulWidget {
 }
 
 class _ChatScreenState extends State<ChatScreen> {
-  bool isTextEmpty = true;
-  bool isVoice = true;
-
-  void changeVoiceCam() {
-    setState(() {
-      isVoice = !isVoice;
-    });
-  }
-
-  final TextEditingController _text = TextEditingController();
-
   late List<Message> msgs;
-  void changeValue(String v) {
-    setState(() {
-      isTextEmpty = v.isEmpty;
-    });
-  }
-
   @override
   void initState() {
     msgs = widget.chat.messages;
@@ -51,13 +34,7 @@ class _ChatScreenState extends State<ChatScreen> {
         title: ChatTitle(chat: widget.chat),
         actions: chatActions,
       ),
-      bottomNavigationBar: TypeAndSend(
-        text: _text,
-        changeValue: changeValue,
-        isVoice: isVoice,
-        changeVoiceCam: changeVoiceCam,
-        isTextEmpty: isTextEmpty,
-      ),
+      bottomNavigationBar: const TypeAndSend(),
       body: ChatWithBackground(msgs: msgs),
     );
   }
