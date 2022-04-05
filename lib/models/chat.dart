@@ -5,11 +5,13 @@ class Chat {
   int id;
   String name;
   bool isOnline;
+  String lastSeen;
 
   Chat({
     required this.id,
     required this.name,
     required this.isOnline,
+    this.lastSeen = "recently",
   }) {
     messages.sort((a, b) => a.date.compareTo(b.date));
   }

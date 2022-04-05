@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:telegram/models/chat.dart';
+import 'package:telegram/screens/chat/chat.dart';
 import 'package:telegram/screens/home/widgets/chat_time.dart';
 import 'package:telegram/screens/home/widgets/unread_trailing.dart';
+import 'package:telegram/utils/slide.dart';
 
 class ChatTile extends StatelessWidget {
   const ChatTile(
@@ -26,7 +28,9 @@ class ChatTile extends StatelessWidget {
       ),
       subtitle: Text(chat.lastMessage.message ?? "..."),
       trailing: chat.unread ? UnreadTrailing(chat) : ChatTime(chat),
-      onTap: () {},
+      onTap: () {
+        Navigator.push(context, slidingRoute(ChatScreen(chat)));
+      },
       style: ListTileStyle.list,
     );
   }

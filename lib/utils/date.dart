@@ -14,8 +14,8 @@ class DateUtil {
     "Saturday",
   ];
 
-  String getTime() {
-    if (date.isBefore(DateTime(now.year, now.month, now.day))) {
+  String getTime([bool showWeek = true]) {
+    if (showWeek && date.isBefore(DateTime(now.year, now.month, now.day))) {
       return getWeek();
     }
 

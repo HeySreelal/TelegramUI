@@ -158,7 +158,7 @@ class OwlData {
       ),
       Message(
         date: DateTime(2022, 4, 5, 18, 0, 20),
-        from: 4,
+        from: 0,
         chatId: 4,
         id: 15,
         message: "Would you mind sharing them with me? 😉",
@@ -172,7 +172,7 @@ class OwlData {
       ),
       Message(
         date: DateTime(2022, 4, 5, 18, 2, 40),
-        from: 4,
+        from: 0,
         chatId: 4,
         id: 17,
         message: "Thanks!",
