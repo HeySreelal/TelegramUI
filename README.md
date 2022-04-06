@@ -1,16 +1,15 @@
-# telegram
+# Telegram Chat UI with Flutter 💙
 
-Clone and experiment with Telegram UI
+Just tried to build the Telegram chat UI with Flutter. This is just a demo. Attaching the screenshots below.
 
-## Getting Started
+<div align="center">
+<img src="./screenshots/Drawer.png" width=150>
+<img src="./screenshots/Chats.png" width=150>
+<img src="./screenshots/Chat.png" width=150>
+</div>
 
-This project is a starting point for a Flutter application.
+Nothing else, just UI and thats it.
 
-A few resources to get you started if this is your first Flutter project:
+🚀 The release builds are available [here](https://github.com/HeySreelal/TelegramUI/releases/tag/v0.0.1).
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Thank you 💙
