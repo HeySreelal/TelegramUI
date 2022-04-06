@@ -4,7 +4,9 @@ Just tried to build the Telegram chat UI with Flutter. This is just a demo. Atta
 
 <div align="center">
 <img src="./screenshots/Drawer.png" width=150>
+    &nbsp;&nbsp;&nbsp;&nbsp;
 <img src="./screenshots/Chats.png" width=150>
+    &nbsp;&nbsp;&nbsp;&nbsp;
 <img src="./screenshots/Chat.png" width=150>
 </div>
 
